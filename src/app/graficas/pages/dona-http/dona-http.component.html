@@ -1,1 +1,17 @@
-<p>dona-http works!</p>
+<h1>Redes sociales mas usadas</h1>
+<hr>
+
+<div class="alert alert-info" *ngIf="loadingItems">
+    Cargando data...
+</div>
+
+<div class="row">
+    <div class="col">
+        <div style="display: block" *ngIf="!loadingItems">
+            <canvas baseChart
+              [data]="doughnutChartData"
+              [type]="doughnutChartType">
+            </canvas>
+        </div>
+    </div>
+</div>
